@@ -1,0 +1,93 @@
+*{
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.metaverse-outer-container{
+    width: 100%;
+    max-width: 700px;
+    height: 20vh;
+
+    background-color: black;
+    outline: 1px solid #ffffff5c;
+
+    padding: 1%;
+
+    color: #008000;
+
+    position: relative;
+
+}
+#console-container{
+    height: 100%;
+    overflow-y: hidden;
+    padding: 1%;   
+
+    scroll-snap-align: start;
+
+}
+#console-container::-webkit-scrollbar{
+    background-color: #171717;
+}
+#console-container::-webkit-scrollbar-button:hover{
+    background-color: #4e4e4e;
+}
+#console-container::-webkit-scrollbar-thumb{
+    background-color: #4d4d4d;
+}
+
+.console-row{
+    display: flex;
+    align-items: stretch;
+    justify-content: start;
+    padding-block: 1%;
+    
+    >p{
+        font-size: x-large;
+        font-weight: 500;
+    }
+}
+.cursor{
+    width: 16px;
+    height: 18px;
+    box-sizing: content-box;    
+
+    /* animation-timing-function: steps(1, start); */
+    animation-name: cursorBlink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes cursorBlink {
+    from {
+        border-bottom: 10px solid transparent;
+    }
+    to {
+        border-bottom: 10px solid #008000;
+    }
+}
+
+
+#enterBtn{
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    z-index: 10;
+    padding: 10px;
+
+    cursor: pointer;
+
+    border: 1px solid #008000;
+    border-radius: 2px;
+    background-color: #000;
+    color: #008000;
+    font-size: 16px;
+    font-family: monospace;
+
+    transition: background-color 0.02s linear;
+
+}
+#enterBtn:active{
+    background-color: #2f2f2f;
+}

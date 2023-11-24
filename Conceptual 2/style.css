@@ -1,0 +1,17 @@
+.btn{
+    padding-inline: 2%;
+    padding-block: 1%;
+    margin-block: 1%;
+    border: none;
+    border-radius: 5px;
+
+    display: block;
+    
+    cursor: pointer;
+
+    transition: transform 0.02s linear;
+
+}
+.btn:active{
+    transform:scale3d(0.92, 0.92, 5)
+}
